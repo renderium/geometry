@@ -1,0 +1,46 @@
+{
+  "name": "@renderium/geometry",
+  "version": "0.0.1",
+  "description": "Geometry assembler for renderium",
+  "keywords": [
+    "webgl",
+    "geometry",
+    "renderium"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/renderium/geometry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renderium/geometry"
+  },
+  "bugs": {
+    "url": "https://github.com/renderium/geometry/issues",
+    "email": "broadsw.rd@yandex.ru"
+  },
+  "author": {
+    "name": "Vladimir Bykov",
+    "email": "broadsw.rd@yandex.ru",
+    "url": "https://github.com/broadsw0rd"
+  },
+  "files": [
+    "dist"
+  ],
+  "umd": "dist/geometry.umd.js",
+  "main": "dist/geometry.cjs.js",
+  "module": "dist/geometry.js",
+  "dependencies": {
+    "@renderium/vertices": "0.0.3"
+  },
+  "devDependencies": {
+    "rollup": "0.63.4",
+    "rollup-plugin-node-resolve": "3.3.0",
+    "snazzy": "7.1.1",
+    "standard": "11.0.1",
+    "uglify-es": "3.3.9"
+  },
+  "scripts": {
+    "check": "standard src/*.js test/*.js | snazzy",
+    "build": "rollup -c",
+    "min": "uglifyjs dist/geometry.umd.js -c -m > dist/geometry.min.js"
+  }
+}
